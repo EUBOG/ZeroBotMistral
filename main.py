@@ -4,15 +4,15 @@ import telebot
 from mistralai import Mistral
 
 # --- Настройка ---
-MISTRAL_API_KEY = "2bhEWXz5xHeZjCDhylAdbxHyH7t3OvZx"  # Замените на свой ключ
-TELEGRAM_BOT_TOKEN = "8224846913:AAE9eJcggdofjH2s4BSQ-GczlubgBJA1uKE"  # Замените на свой токен
+MISTRAL_API_KEY = "MISTRAL_API_KEY"  # Замените на свой ключ
+TELEGRAM_BOT_TOKEN = "TELEGRAM_BOT_TOKEN"  # Замените на свой токен
 
 # Инициализация бота и клиента Mistral
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 client = Mistral(api_key=MISTRAL_API_KEY)
 
 # ID вашего агента с включенным image_generation
-AGENT_ID = "ag_019864490ff6739d8d51d770fc593fe9" # Замените на реальный ID
+AGENT_ID = "AGENT_ID" # Замените на реальный ID
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
